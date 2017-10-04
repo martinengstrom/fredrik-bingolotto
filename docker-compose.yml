@@ -1,0 +1,12 @@
+version: "2"
+services:
+    server:
+        restart: always
+        build: .
+        environment:
+            - VIRTUAL_HOST=lotto.sigkill.me
+            - VIRTUAL_PORT=8000
+            - HTTPS_METHOD=noredirect
+        network_mode: "bridge"
+        volumes:
+            - .:/srv
