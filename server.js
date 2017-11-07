@@ -37,6 +37,9 @@ function generateLatex(columns) {
 				tableRows += " \\\\";
 			}
 		}
+		// Add line separator on every 5th line
+		if ((i + 1) % 5 == 0)
+			tableRows += " \\hline";
 		tableRows += "\n";
 	}
 	return header + tableRows + footer;
